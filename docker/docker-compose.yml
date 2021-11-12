@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cad:
+    image: cyborg/cad
+    container_name: cyborg-cad
+    user : root
+    command: >
+      /bin/bash -c "
+        cd src;
+        rm -rf build;
+        ./setup.py build;
+      "
+    volumes:
+      - ../:/src
