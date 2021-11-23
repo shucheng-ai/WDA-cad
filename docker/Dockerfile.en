@@ -3,6 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG C.UTF-8
 RUN apt-get update
 RUN apt-get install -y libboost-all-dev python3-pip libpython3-dev vim libgoogle-glog-dev libopencv-dev
+RUN pip3 install --upgrade pip
 RUN pip3 install numpy cmake scikit-build
-RUN pip3 install opencv-python ezdxf
+RUN pip3 install opencv-python ezdxf==0.14.2
 
